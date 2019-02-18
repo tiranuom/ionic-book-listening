@@ -1,0 +1,7 @@
+{
+  "name": "ionic-book-listing",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

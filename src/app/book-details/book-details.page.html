@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button href="/home" routerDirection="backward" style="float: left">
+      <ion-icon name="arrow-back" ></ion-icon>
+    </ion-button>
+    <ion-title>{{(bookDetails || {}).title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-img [src]="getImageUrl()">
+
+  </ion-img>
+  <ion-label>By {{getAuthorsList()}}</ion-label>
+
+</ion-content>

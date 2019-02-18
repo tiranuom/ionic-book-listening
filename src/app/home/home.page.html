@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionBlur)="search()" placeholder="Search Subjects" id="search-bar"></ion-searchbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of data.works" detail [routerLink]="'/book-details/' + item.cover_id" [routerDirection]="forward">
+      <ion-avatar>
+        <img [src]="toImageUrl(item.cover_id)">
+      </ion-avatar>
+      <ion-label padding-start="10">{{item.title}}</ion-label>
+      <ion-label style="color: gray">by {{getAuthorsList(item)}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
